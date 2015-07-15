@@ -1,0 +1,6 @@
+Right click CudaCLA project and select Custom Build Rules.
+Locate Cuda.Rules. It is in Nvidia SDK C\\Common folder
+Drag CUDART.lib into the project, otherwise it will give lnk error
+
+Project edited by CUDAtoolkit 3.0, GPU Computing SDK 3.0 and MSFT Visual C++ 2005
+Program tested on NVIDIA GTS 250 and FX 580 with driver 197.13
