@@ -1,7 +1,7 @@
 <img src="images/image001.png">
 <h2> GPU Accelerated Chemical Similarity Calculation </h2>
 
-This is one of my research projects at graduate school. Let me begin with a story: <p>
+This is one of my research projects at graduate school in 2011. Let me begin with a story: <p>
 
 I love PC Gaming. Back to 2007, I just entered graduate school and got a free Dell PC from my department. Yes, a "free" PC. It came with a "cheap" graphic card, GeForce 8300. Later on, that graphic card model was shown defective and resulted in massive recall. NVidia stock price tumbled for that. Honestly, that card sucked. I couldn't play my favorite "Need for Speed, Shift", not even in the lowest resolution. Of course I was not supposed to expect too much out of free stuff.<p>
 
@@ -11,7 +11,7 @@ Obviously I couldn't afford that much for gaming. A few months later, NVidia rel
 
 3 years later, my lab bought a new desktop. Luckily, it had a Quadro FX 580 graphic card! Even though it was a low-end professional graphic card, at least I could try CUDA on it! It only supported CUDA 1.1. There were tons of hardware features missing compared to architecture nowadays, especially compared to Kepler. I downloaded NVidia CUDA SDK and started to play with it. It opened a new world for me! I knew some parallel programming before, such as process, thread, mutex, semaphore, etc. But the way how GPU worked was beyond my knowledge. Even trivial job like "retrieving integers larger than 256 in an array" was pretty difficult for me that time. Little by little, I learnt shared memory, coalesced memory access, thread synchronization, thread branching, etc. Also there were so many interesting algorithms in parallel computing, such as stream reduction and histogram creation. I mainly learnt from a book called "GPU Gems". In the end, I was able to implement an efficient sorting algorithm from scratch: sorting network + merge sort. It was fun. I would say the most difficult part was debugging. Debugging GPU code was quite annoying: copy the value from GPU memory to CPU memory and printf. Everything was in low level C code. Now NVidia has Microsoft Visual Studio integration. It is much simpler.<p>
 Next, I needed to justify why I was doing this. Then I came up with this idea, using GPU to compute chemical similarity matrix. <br>
- - It was useful. Many data mining algorithm require pair-wise comparison (clustering, nearest neighbor search); <br>
+ - It was useful. Many data mining algorithms require pair-wise comparison (clustering, nearest neighbor search); <br>
  - It was computational expensive. N-by-N matrix is pretty big if N is 100K for example. 100K in chem-informatics is common. Furthermore, the matrix can't be saved in RAM. Instead it needs to be computed at runtime.<br>
  - Last, it was good for GPU. Use O(N) memory space to output O(N-square) complexity data is what GPU is good at. Otherwise, time would be wasted at transferring data from RAM to GPU Memory. Not worth it. <br>
  - Most importantly, my advisor wouldn't bother me for "research plan", "progress report", and I could do something I was interested in. <br>
