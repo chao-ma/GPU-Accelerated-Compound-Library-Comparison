@@ -1,5 +1,5 @@
-<img src="images/image001.png">
 <h2> GPU Accelerated Chemical Similarity Calculation </h2>
+<img src="images/image001.png">
 
 This is one of my research projects at graduate school in 2011. Let me begin with a story: <p>
 
